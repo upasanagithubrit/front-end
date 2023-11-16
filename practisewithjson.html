@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2> hello</h2>
+    <button onclick="window.print()"> dabao</button>
+    <p id="fun">
+        function
+
+    </p>
+    <p id="event">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati libero harum culpa quibusdam laudantium, labore maiores rem illum recusandae cum delectus ad quae assumenda incidunt cupiditate reiciendis. Earum veritatis atque facilis quae tempore aliquid omnis voluptas harum, ab ex nihil dolore. Fugiat quos eligendi nulla atque consectetur vero, ut deleniti ducimus excepturi! Sit eveniet blanditiis sequi velit dolores fugit praesentium tenetur quam labore suscipit cumque quibusdam, sapiente, voluptate, deleniti reiciendis ipsam laudantium veniam molestias maiores illo vitae debitis laborum ut? Reiciendis ipsam doloribus veritatis fugit corrupti quo maxime alias nesciunt nam odit minus voluptatibus totam dolorum molestiae quaerat error animi, voluptatem ipsum sed, quisquam, voluptates molestias. Ducimus neque magnam veritatis libero odio corporis, ullam molestias rem pariatur beatae eveniet, eum, iste placeat tempore ea sint consequatur explicabo provident. Voluptatum rerum dolor velit labore, quasi nostrum quisquam dicta aliquid ratione veniam quae, accusamus tempora suscipit amet. Reprehenderit necessitatibus laudantium nam est.
+
+
+    </p>
+    <button onclick="show()" id="btn"> show/hide</button>
+
+    <script>
+         var a=12;
+        console.log(a);
+        console.log("for loop");
+        for(var i=0;i<a;i++)
+        {
+            console.log(i);
+        }
+        console.log("while loop");
+        while(a>0)
+        {
+            console.log(a);
+            a--;
+        }
+        let b;
+        function abcd(){
+            return 30;
+        }
+       b= abcd();
+      
+        document.getElementById('fun').innerHTML=b;
+
+        //functions o array 
+        var arr= [1,2,3,4,5];
+        console.log(arr);
+        arr.push(7);
+        console.log(arr);
+        arr.pop();
+        console.log(arr);
+        arr.unshift(0);
+        console.log(arr);
+        arr.shift();
+        console.log(arr);
+        arr.splice(2,1);
+        console.log(arr);
+
+//object 
+        var ghadi={
+            type:"analog",
+            name:"sonata",
+            price:12000
+        }
+
+        console.log(ghadi);
+
+
+        //objct with function
+        var ghadi1={
+            type:"analog",
+            name:"sonata",
+            price:12000,
+            kuchbolo:abcd()
+        }
+        function abcd(){
+            return "i am function";
+        }
+
+        console.log(ghadi1);
+        document.getElementById('fun').innerHTML=ghadi1.price;
+
+        //copy object
+        var ghadicopy={ ...ghadi};
+        console.log(ghadicopy);
+
+        //access array through foreach loop
+        var o=[1,2,3,4,5];
+        o.forEach(function (val)
+        {
+            console.log(val);
+        })
+
+    //acess object through for loop
+       for(var key in ghadi)
+       {
+        console.log(key,ghadi[key]);
+       }
+
+       //first class function
+       function hello(c)
+       {
+        c();
+       }
+       hello(function (){console.log("am first class function");})
+
+       //alert
+       alert("hello i am alert");
+
+       // prompt message
+       let name=prompt("enter your name:");
+       console.log("hello"+name);
+
+       //confirm
+       let n =confirm("really want to delete//");
+
+       //array through for loop
+       for(element of o)
+       {
+        console.log(element);
+        document.getElementById('fun').innerHTML=element;
+       }
+
+       //dom-- document object model
+       let res=document.getElementById('fun');
+       console.log(res);
+       
+
+       //event 
+
+function show(){
+    let btn=document.getElementById('btn');
+    let para=document.getElementById('event');
+
+    if(para.style.display!='none')
+    {
+        para.style.display='none';
+    }
+    else{
+        para.style.display='block';
+    }
+}
+
+
+
+
+       
+    </script>
+</body>
+</html>
